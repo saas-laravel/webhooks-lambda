@@ -31,4 +31,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'lambda' => [
+        'stripe' => [
+            'url' => env('LAMBDA_STRIPE_HANDLER_URL'),
+            'queue_url' => env('SQS_PREFIX') . env('LAMBDA_STRIPE_HANDLER_QUEUE'),
+            'queue_name' => env('LAMBDA_STRIPE_HANDLER_QUEUE')
+        ]
+    ]
 ];

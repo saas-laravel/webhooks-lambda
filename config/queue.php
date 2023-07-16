@@ -71,6 +71,14 @@ return [
             'after_commit' => false,
         ],
 
+        'sqs-plain' => [
+            'driver' => 'sqs-plain',
+            'key'    => env('SIDECAR_ACCESS_KEY_ID', ''),
+            'secret' => env('SIDECAR_SECRET_ACCESS_KEY', ''),
+            'prefix' => env('SQS_PREFIX'),
+            'queue'  => 'default',
+            'region' => env('SIDECAR_REGION'),
+        ],
     ],
 
     /*
